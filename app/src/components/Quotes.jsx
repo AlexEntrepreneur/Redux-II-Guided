@@ -30,4 +30,13 @@ export class Quotes extends React.Component {
   }
 }
 
-export default connect()(Quotes);
+function mapStateToProps(reducers) {
+  return {
+    quotes: reducers.quotes,
+    quoteOfTheDay: reducers.quoteOfTheDay
+  }
+}
+
+export default connect(
+  mapStateToProps
+)(Quotes);
