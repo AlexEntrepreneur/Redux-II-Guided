@@ -45,3 +45,12 @@ function changeArray() {
 
 console.log(originalArray);
 console.log(changedArray);
+
+// OBJECTS AND ARRAYS ARE MUTABLE
+const concatArray = originalArray.concat(6);
+const mappedArray = originalArray.map(num => num * 10);
+const filteredArray = originalArray.filter(num => num > 3);
+
+console.log(mappedArray);
+console.log(filteredArray);
+console.log(concatArray);
