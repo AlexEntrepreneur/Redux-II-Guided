@@ -57,3 +57,11 @@ console.log(concatArray);
 console.log(mappedArray);
 console.log(filteredArray);
 console.log(spreadedArray);
+
+// Copying Objects!
+const spreadedObject = { ...originalObject, new: 7, c:10 };
+const assignedObject = Object.assign({ new: 10 }, originalObject, { c: 100 });
+
+console.log(spreadedObject);
+console.log(assignedObject);
+
