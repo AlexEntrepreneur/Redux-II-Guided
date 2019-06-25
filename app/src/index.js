@@ -6,11 +6,8 @@ import { Provider } from 'react-redux';
 import './script';
 import './index.css';
 
-import { quotesReducer, quoteOfTheDayReducer } from './reducers/reducers';
-
 const combinedReducer = combineReducers({
-  quotes: quotesReducer,
-  quoteOfTheDay: quoteOfTheDayReducer
+  // Add Reducers Here
 });
 
 const store = createStore(

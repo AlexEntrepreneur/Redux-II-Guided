@@ -1,8 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import Quote from './Quote';
-
-import { makeQuoteOfTheDay, markFavourite, deleteQuote } from '../actions/actionCreators';
 
 export class Quotes extends React.Component {
   // state = {
@@ -32,14 +30,4 @@ export class Quotes extends React.Component {
   }
 }
 
-function mapStateToProps(reducers) {
-  return {
-    quotes: reducers.quotes,
-    quoteOfTheDay: reducers.quoteOfTheDay,
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  { makeQuoteOfTheDay, markFavourite, deleteQuote },
-)(Quotes);
+export default Quotes;

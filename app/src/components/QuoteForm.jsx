@@ -1,7 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addQuote } from '../actions/actionCreators';
-
 
 const QuoteForm = (props) => {
   const onAddQuote = (event) => {
@@ -9,12 +7,7 @@ const QuoteForm = (props) => {
     const quoteInput = event.target['quote']
     event.preventDefault();
 
-    authorInput.value 
-    && quoteInput.value 
-    && props.addQuote(
-      authorInput.value,
-      quoteInput.value,
-    );
+    // Use addQuote Function Here
 
     authorInput.value = '';
     quoteInput.value = '';
@@ -23,15 +16,9 @@ const QuoteForm = (props) => {
   return (
     <div>
       <form onSubmit={onAddQuote} className="quote-form">
-        <div>
-          <input name="author" placeholder="Author" />
-        </div>
-        <div>
-          <input name="quote" placeholder="Quote" />
-        </div>
-        <div>
-          <button type="submit">Add Quote</button>
-        </div>
+        <input name="author" placeholder="Author" />
+        <input name="quote" placeholder="Quote" />
+        <button type="submit">Add Quote</button>
       </form>
     </div>
   );
@@ -39,5 +26,5 @@ const QuoteForm = (props) => {
 
 export default connect(
   null, 
-  { addQuote }
+  null
 )(QuoteForm);
