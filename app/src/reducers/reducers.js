@@ -30,5 +30,16 @@ export function quotesReducer(sliceOfState = quotesData, action) {
 
 // quoteOfTheDayReducer
 export function quoteOfTheDayReducer(sliceOfState = null, action) {
+    switch (action.type) {
+        case MARK_QUOTE_OF_THE_DAY:
+            return action.payload;
+        case DELETE_QUOTE:
+            if (action.payload === sliceOfState) {
+                return null;
+            }
+            return sliceOfState;
+        default:
+            return sliceOfState;
+    }
 
 }
