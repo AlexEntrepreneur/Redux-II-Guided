@@ -12,13 +12,19 @@ export function quotesReducer(sliceOfState = quotesData, action) {
         case DELETE_QUOTE:
             return sliceOfState.filter(quote => quote.id !== action.payload);
         case ADD_QUOTE:
-            // Do stuff
-        break;
+            return sliceOfState.concat(action.payload);
         case MARK_FAVOURITE:
-            // Do stuff
-        break;
+            return sliceOfState.map(quote => {
+                if (quote.id === action.payload) {
+                    return {
+                        ...quote,
+                        favourite: !quote.favourite
+                    };
+                }
+                return quote;
+            })
         default:
-        // Do stuff
+            return sliceOfState;
     }
 }
 
