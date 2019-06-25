@@ -1,5 +1,5 @@
 import React from 'react';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 import Quote from './Quote';
 
 export class Quotes extends React.Component {
@@ -30,4 +30,4 @@ export class Quotes extends React.Component {
   }
 }
 
-export default Quotes;
+export default connect()(Quotes);
