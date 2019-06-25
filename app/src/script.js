@@ -47,10 +47,13 @@ console.log(originalArray);
 console.log(changedArray);
 
 // OBJECTS AND ARRAYS ARE MUTABLE
+// Copying Arrays!
 const concatArray = originalArray.concat(6);
 const mappedArray = originalArray.map(num => num * 10);
 const filteredArray = originalArray.filter(num => num > 3);
+const spreadedArray = [...originalArray, 6];
 
+console.log(concatArray);
 console.log(mappedArray);
 console.log(filteredArray);
-console.log(concatArray);
+console.log(spreadedArray);
