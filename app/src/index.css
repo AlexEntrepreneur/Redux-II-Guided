@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   min-height: 100%;
   width: 100%;
@@ -58,8 +62,9 @@ form {
   margin-bottom: 32px;
 }
 
-.quote-form input, .quote-form button {
-  max-width: 250px;
+.quote-form > input, .quote-form > button {
+  max-width: unset;
+  margin: 0;
   width: 100%;
 }
 
