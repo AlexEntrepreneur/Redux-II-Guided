@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { addQuote } from '../actions/actionCreators';
 
 const QuoteForm = (props) => {
   const onAddQuote = (event) => {
@@ -8,6 +9,12 @@ const QuoteForm = (props) => {
     event.preventDefault();
 
     // Use addQuote Function Here
+    authorInput.value
+    && quoteInput.value
+    && props.addQuote(
+      authorInput.value,
+      quoteInput.value,
+    );
 
     authorInput.value = '';
     quoteInput.value = '';
@@ -26,5 +33,5 @@ const QuoteForm = (props) => {
 
 export default connect(
   null, 
-  null
+  { addQuote }
 )(QuoteForm);

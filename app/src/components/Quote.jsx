@@ -9,7 +9,7 @@ const Quote = (props) => {
       <div>
         <button onClick={() => props.deleteQuote(props.quote.id)}>DELETE</button>
         <button onClick={() => props.markFavourite(props.quote.id)}>MARK FAVOURITE</button>
-        <button onClick={() => props.makeQuoteOfTheDay(props.quote.id)}>MAKE QUOTE OF THE DAY</button>
+        <button onClick={() => props.markQuoteOfTheDay(props.quote.id)}>MAKE QUOTE OF THE DAY</button>
       </div>
     </StyledQuote>
   );
