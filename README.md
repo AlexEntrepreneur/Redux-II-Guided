@@ -17,6 +17,10 @@ export const EXAMPLE_ACTION_4 = 'EXAMPLE_ACTION_4';
 
 **3. Define Action Creators**
 ```js
+// Importing our action types from the file they were exported from
+import { EXAMPLE_ACTION_1, EXAMPLE_ACTION_2 } from './pathToActions';
+```
+```js
 export function exampleFunc1() {
   return { type: EXAMPLE_ACTION_1 };
 }
