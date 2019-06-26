@@ -15,7 +15,23 @@ export const EXAMPLE_ACTION_3 = 'EXAMPLE_ACTION_3';
 export const EXAMPLE_ACTION_4 = 'EXAMPLE_ACTION_4';
 ```
 
-**3. Create Reducers**
+**3. Define Action Creators**
+```js
+export function exampleFunc1() {
+  return { type: EXAMPLE_ACTION_1 };
+}
+
+export function exampleFunc2() {
+  return { type: EXAMPLE_ACTION_2 };
+}
+
+// Creating action creator that passes some data to the reducer
+export function exampleFunc3() {
+  return { type: EXAMPLE_ACTION_3, payload: newData };
+}
+```
+
+**4. Create Reducers**
 ```js
 // Importing our action types from the file they were exported from
 import { EXAMPLE_ACTION_1, EXAMPLE_ACTION_2 } from './pathToActions';
@@ -40,7 +56,7 @@ export function exampleReducer1(sliceOfState = initialObject, action) {
 // Define additional reducers for each slice of state
 ```
 
-**4. Combine Reducers**
+**5. Combine Reducers**
 
 In our `index.js`:
 ```js
@@ -55,7 +71,7 @@ const combinedReducer = combineReducers({
 });
 ```
 
-**5. Create Redux Store**
+**6. Create Redux Store**
 
 In our `index.js`:
 ```js
@@ -75,7 +91,7 @@ const store = createStore(
 );
 ```
 
-**6. Use Redux Store in React App**
+**7. Use Redux Store in React App**
 
 In our `index.js`:
 ```js
@@ -89,23 +105,7 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 ```
-
-**7. Define Action Creators**
-```js
-export function exampleFunc1() {
-  return { type: EXAMPLE_ACTION_1 };
-}
-
-export function exampleFunc2() {
-  return { type: EXAMPLE_ACTION_2 };
-}
-
-// Creating action creator that passes some data to the reducer
-export function exampleFunc3() {
-  return { type: EXAMPLE_ACTION_3, payload: newData };
-}
-```
-
+              
 **8. Connect React Components**
 
 In our component file:
