@@ -1,11 +1,11 @@
 # Redux-II-Guided
 
 ## Using Redux in 12 Steps!
-**1. Plan**
+### 1. Plan
 
 Think back to using state in React components. What slices of state will our application have? Write them down.
 
-**2. Define Actions Types**
+### 2. Define Actions Types
 
 Key Question: What types of **actions** will alter my slices of state? Define them as types:
 ```js
@@ -15,7 +15,7 @@ export const EXAMPLE_ACTION_3 = 'EXAMPLE_ACTION_3';
 export const EXAMPLE_ACTION_4 = 'EXAMPLE_ACTION_4';
 ```
 
-**3. Define Action Creators**
+### 3. Define Action Creators
 ```js
 // Importing our action types from the file they were exported from
 import { EXAMPLE_ACTION_1, EXAMPLE_ACTION_2 } from './pathToActions';
@@ -35,7 +35,7 @@ export function exampleFunc3() {
 }
 ```
 
-**4. Create Reducers**
+### 4. Create Reducers
 ```js
 // Importing our action types from the file they were exported from
 import { EXAMPLE_ACTION_1, EXAMPLE_ACTION_2 } from './pathToActions';
@@ -60,7 +60,7 @@ export function exampleReducer1(sliceOfState = initialObject, action) {
 // Define additional reducers for each slice of state
 ```
 
-**5. Combine Reducers**
+### 5. Combine Reducers
 
 In our `index.js`:
 ```js
@@ -95,7 +95,7 @@ const store = createStore(
 );
 ```
 
-**7. Use Redux Store in React App**
+### 7. Use Redux Store in React App
 
 In our `index.js`:
 ```js
@@ -110,7 +110,7 @@ ReactDOM.render(
 );
 ```
               
-**8. Connect React Components**
+### 8. Connect React Components
 
 In our component file:
 ```js
@@ -122,7 +122,7 @@ At the bottom of our component:
 export default connect()(Component);
 ```
 
-**9. Map State to Props**
+### 9. Map State to Props
 
 In our component file:
 ```js
@@ -141,7 +141,7 @@ At the bottom of our component:
 export default connect(mapStateToProps)(Component);
 ```
 
-**10. Connect Action Creators to Component**
+### 10. Connect Action Creators to Component
 
 In our component file:
 ```js
@@ -157,7 +157,7 @@ export default connect(
 )(Component);
 ```
 
-**11. Access State Through Props**
+### 11. Access State Through Props
 
 In our component file:
 ```jsx
@@ -165,7 +165,7 @@ In our component file:
 <div>{ props.exampleProp1 }</div>
 ```
 
-**12. Use Action Creators**
+### 12. Use Action Creators
 
 In our component file:
 ```jsx
